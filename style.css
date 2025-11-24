@@ -1,0 +1,257 @@
+/* === Общие стили === */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* === Темная тема === */
+  body.dark-theme {
+    background-color: #3b2f2f;
+    color: #f5f5dc;
+  }
+  
+  body.dark-theme header {
+    background-color: #5c3a21;
+    border-bottom: 4px solid #bfa07a;
+  }
+  
+  body.dark-theme .project, 
+  body.dark-theme .about, 
+  body.dark-theme .skills, 
+  body.dark-theme .gallery {
+    background-color: #4a3629;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+  
+  /* === Светлая (яркая) тема === */
+  body.light-theme {
+    background-color: #fdf6f0;
+    color: #3b2f2f;
+  }
+  
+  body.light-theme header {
+    background-color: #bfa07a;
+    border-bottom: 4px solid #8c5e3c;
+  }
+  
+  body.light-theme .project, 
+  body.light-theme .about, 
+  body.light-theme .skills, 
+  body.light-theme .gallery {
+    background-color: #f5e1d4;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  /* === Контейнер === */
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* === Header === */
+  header {
+    padding: 30px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+  
+  header p {
+    font-size: 1.2em;
+    margin: 5px 0 15px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: inherit;
+    transition: color 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    color: #bfa07a;
+  }
+  
+  #theme-toggle {
+    padding: 8px 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #bfa07a;
+    color: #3b2f2f;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  #theme-toggle:hover {
+    background-color: #d2b48c;
+    transform: scale(1.05);
+  }
+  
+  /* === Разделы === */
+  .section {
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* === Навыки === */
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .skill-list span {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: transform 0.3s;
+  }
+  
+  body.dark-theme .skill-list span {
+    background-color: #bfa07a;
+    color: #3b2f2f;
+  }
+  
+  body.light-theme .skill-list span {
+    background-color: #8c5e3c;
+    color: #fdf6f0;
+  }
+  
+  .skill-list span:hover {
+    transform: scale(1.1);
+  }
+  
+  /* === Проекты === */
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .project {
+    flex: 1 1 250px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  }
+  
+  .project h3 {
+    margin-top: 10px;
+  }
+  
+  .project p {
+    font-size: 0.95em;
+  }
+  
+  /* === Плейсхолдер для проекта === */
+  .project-img-placeholder {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: transform 0.3s;
+  }
+  
+  .project-img-placeholder:hover {
+    transform: scale(1.05);
+  }
+  
+  /* === Галерея === */
+  .gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .photo-placeholder {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .photo-placeholder:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  }
+  
+  body.dark-theme .photo-placeholder, body.dark-theme .project-img-placeholder {
+    background-color: #bfa07a;
+    color: #3b2f2f;
+  }
+  
+  body.light-theme .photo-placeholder, body.light-theme .project-img-placeholder {
+    background-color: #8c5e3c;
+    color: #fdf6f0;
+  }
+  
+  /* === Footer === */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #5c3a21;
+    color: #f5f5dc;
+  }
+  
+  body.light-theme footer {
+    background-color: #bfa07a;
+    color: #3b2f2f;
+  }
+  
+  /* === Адаптивность === */
+  @media (max-width: 600px) {
+    .project-list, .gallery-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+    }
+  
+    #theme-toggle {
+      width: 100%;
+    }
+  }
+  

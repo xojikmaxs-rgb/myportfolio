@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио Хожиакбар Махсуджонов</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+  <header>
+    <div class="container header-container">
+      <h1>Хожиакбар Махсуджонов</h1>
+      <p>IT-специалист | Игры и проекты</p>
+      <nav>
+        <ul>
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#skills">Навыки</a></li>
+          <li><a href="#projects">Проекты</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle">Сменить тему</button>
+      <div class="contact">
+        <p>📞 +998 887015111</p>
+        <p>Telegram: <a href="https://t.me/ensiuen" target="_blank">@ensiuen</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/ensiuen" target="_blank">@ensiuen</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section container">
+      <h2>Обо мне</h2>
+      <p><strong>Имя:</strong> Хожиакбар Махсуджонов</p>
+      <p><strong>Дата рождения:</strong> 15 ноября 2010 года</p>
+      <p><strong>Образование:</strong> Закончил 5-летний курс IT в IT Step Academy</p>
+      <p><strong>Опыт работы:</strong> Учитель в IT Step Academy 4 месяца</p>
+      <p><strong>Знание английского:</strong> Базовое / Среднее</p>
+      <p><strong>Личные качества:</strong> Ответственный, креативный, легко обучаемый, целеустремлённый.</p>
+    </section>
+
+    <section id="skills" class="section container">
+      <h2>Навыки</h2>
+      <div class="skill-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>Unity / C#</span>
+        <span>Photoshop</span>
+        <span>Figma</span>
+        <span>Git</span>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2>Мои проекты</h2>
+      <div class="project-list">
+        <div class="project">
+          <div class="project-img-placeholder">TapBreaker</div>
+          <h3>TapBreaker</h3>
+          <p>Кликер-игра, разработанная мной полностью самостоятельно. Основные механики: накопление очков, улучшения и бонусы.</p>
+        </div>
+        <div class="project">
+          <div class="project-img-placeholder">Scary Hills</div>
+          <h3>Scary Hills</h3>
+          <p>Хоррор-игра с атмосферой страха и увлекательным геймплеем. Использованы эффекты света и звука для усиления ужаса.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section container">
+      <h2>Фотографии</h2>
+      <div class="gallery-list">
+        <div class="photo-placeholder">Фото 1</div>
+        <div class="photo-placeholder">Фото 2</div>
+        <div class="photo-placeholder">Фото 3</div>
+        <div class="photo-placeholder">Фото 4</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Хожиакбар Махсуджонов</p>
+    </div>
+  </footer>
+
+  <script>
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      document.body.classList.toggle('light-theme');
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
